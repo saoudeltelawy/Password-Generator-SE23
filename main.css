@@ -255,3 +255,26 @@ footer p {
   font-size: 0.8rem;
   margin: 0;
 }
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .site-info {
+    display: none;
+  }
+  label {
+    display: block;
+  }
+  .numbers-input {
+    width: 100%;
+  }
+  #types {
+    width: 100%;
+    height: 1.5rem;
+    margin-bottom: 1.4rem;
+  }
+  #first-input,
+  #second-input {
+    margin-left: 2rem;
+  }
+}
