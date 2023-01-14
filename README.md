@@ -7,5 +7,7 @@ I had tested many Vanilla JS concepts in this project and did a lot of works pro
 Features:
 
 -Max Length Password 
+
 -Clipboard Copy
+
 -Can Use Mix password [Remove Numbers or Symbols]
