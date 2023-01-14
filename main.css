@@ -1,0 +1,257 @@
+/* Dark-Light Icon */
+:root {
+  --bs-dark: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* [Default: Dark Mode] */
+  /* background: #1f2937; */
+  font-family: "Karla", sans-serif;
+}
+
+/* Site Hints  */
+.site-info {
+  border-radius: 6px;
+  box-shadow: -5px -2px 3px #00000070;
+  background-color: #434b57;
+  padding: 0.6rem 1rem;
+  width: 20%;
+  position: absolute;
+  right: 1rem;
+  top: 20px;
+}
+.site-info h3 {
+  color: gainsboro;
+}
+.site-info ul {
+  line-height: 1.4;
+  text-indent: 1px;
+  /* white-space: pre-line; */
+}
+.site-info li::marker {
+  color: rgba(249, 249, 249, 0.401);
+}
+
+main {
+  /* padding: 2rem 15rem; */
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Heading */
+h1 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 40px;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+h1 span {
+  font-style: normal;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -0.025em;
+
+  color: #4adf86;
+}
+
+/* Icon  */
+.fa-lock {
+  font-size: 2.3rem;
+}
+
+p {
+  /* Supporting text */
+
+  /* text-xl/leading-7/font-normal */
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 1.3rem;
+  /* Medium grey */
+  color: #d5d4d8;
+}
+
+/* Numbers Input  */
+.numbers-input {
+  width: 10%;
+  margin-top: 0;
+  margin-bottom: 0.95rem;
+  margin-left: 0.3rem;
+  margin-right: 0.5rem;
+}
+label {
+  font-weight: 700;
+  /* text-shadow: 2px 2px 5px #15151597, 4px 2px 4px #00000047; */
+}
+/* Select Element  */
+
+#types {
+  /* appearance: none; */
+  /* background-color: transparent; */
+  background: #0000003d;
+  width: 22%;
+  color: #7a8da8;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+button {
+  font-family: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 17px 9px 15px;
+  gap: 12px;
+  width: 191px;
+  height: 40px;
+  border: none;
+  background-color: #10b981;
+  color: white;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+  position: relative;
+}
+
+button::after {
+  content: "";
+
+  position: absolute;
+  width: 846px;
+  /* height: 0px; */
+  left: 0.2rem;
+  top: 4.2rem;
+  border: 1px solid #2f3e53;
+}
+
+button:hover {
+  background-color: #4adf86;
+  color: #2f3e53;
+}
+/* Password Inputs  */
+.inputs-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 2.4rem;
+  /* gap: 0.5rem; */
+}
+input {
+  margin-top: 1.125rem;
+  width: 350px;
+  height: 40px;
+  /* margin-right: 1rem; */
+  background: #273549;
+  border-radius: 6px;
+  border: 1px solid #273549;
+  outline: none;
+  /* color: white; */
+  font-size: 1rem;
+  text-indent: 0.4rem;
+  color: #55f991;
+  cursor: pointer;
+}
+
+.password-img {
+  display: block;
+  max-width: 65%;
+  height: 15%;
+  border-radius: 5px;
+  mix-blend-mode: lighten;
+  /* margin-block: 2rem; */
+  margin: 3rem auto;
+  border: 10px solid transparent;
+  overflow: hidden;
+  opacity: 0.35;
+  /* border: none; */
+  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
+    rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+
+/* Dark-Light Icon */
+
+.theme-container {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.theme-container:hover {
+  opacity: 0.8;
+}
+
+.shadow-dark {
+  /* background: linear-gradient(145deg, #23282c, #1e2125); */
+  box-shadow: 17px 17px 23px #1f2937, -17px -17px 23px #1f2937,
+    inset 5px 5px 4px #1e2226, inset -5px -5px 4px #1f2937;
+}
+
+.shadow-light {
+  box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px #ffffff,
+    inset 7px 7px 3px rgba(209, 217, 230, 0.35),
+    inset -11px -11px 3px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes change {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.4);
+  }
+}
+
+.change {
+  animation-name: change;
+  animation-duration: 1s;
+  animation-direction: alternate;
+}
+
+/* Footer  */
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+footer p {
+  color: #d5d4d8;
+  font-size: 0.8rem;
+  margin: 0;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Heading -->
+      <h1>
+        Generate a <br /><span>random password</span>
+        <i class="fa-solid fa-lock icon"></i>
+      </h1>
+      <div class="site-info">
+        <h3>Notes:</h3>
+        <ul>
+          <li>You will have 2 random passwords to choose!</li>
+          <li>Password maximum length is 15 characters.</li>
+          <li>Double Click the box to copy the password.</li>
+        </ul>
+      </div>
+      <p>Never use an insecure password again.</p>
+      <label for="numbers">Set Password Length</label>
+      <input
+        type="number"
+        name=""
+        id="numbers"
+        class="numbers-input"
+        max="15"
+      />
+      <!-- <p></p> -->
+      <!-- Password Criteria  -->
+
+      <label for="types">Password Type:</label>
+
+      <select name="types" id="types">
+        <option value="default">Include Symbols & Numbers</option>
+        <option value="no-symbols">Remove Symbols</option>
+        <option value="no-numbers">Remove Numbers</option>
+      </select>
+
+      <button class="btn">Generate passwords</button>
+      <!-- <hr /> -->
+      <div class="inputs-wrapper">
+        <input type="text" class="text" id="first-input" />
+        <input type="text" class="text" id="second-input" />
+      </div>
+
+      <img src="imgs/password.webp" alt="" class="password-img" />
+    </main>
+    <!-- Dark/Light Mode  -->
+    <div class="theme-container shadow-dark">
+      <img
+        id="theme-icon"
+        src="https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg"
+        alt="ERR"
+      />
+    </div>
+
+    <footer>
+      <p>Created By Saoud ElTelawy</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
