@@ -69,10 +69,6 @@ h1 span {
 }
 
 p {
-  /* Supporting text */
-
-  /* text-xl/leading-7/font-normal */
-
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -89,6 +85,7 @@ p {
   margin-bottom: 0.95rem;
   margin-left: 0.3rem;
   margin-right: 0.5rem;
+  /* background-color: #1f2a37; */
 }
 label {
   font-weight: 700;

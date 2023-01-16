@@ -255,10 +255,6 @@ let numbersInput = document.querySelector(".numbers-input");
 let numberInputValue = numbersInput.value;
 let select = document.getElementById("types");
 
-// Icon to be changed after a while [Animation]
-// setTimeout(() => {
-//   icon.classList.toggle("fa-unlock");
-// }, 4000);
 function animateIcon() {
   //   icon.classList.remove("fa-unlock");
   //   icon.classList.add("fa-lock");
@@ -269,7 +265,6 @@ setInterval(animateIcon, 2000);
 // Logic
 numbersInput.addEventListener("change", function (e) {
   numberInputValue = e.target.value;
-  // alert(numberInputValue);
 });
 
 btn.addEventListener("click", function () {
@@ -290,7 +285,6 @@ function getRandomPassword() {
     let randomNum = Math.floor(Math.random() * characters.length);
 
     if (numberInputValue >= 16) {
-      // alert("Shit!");
       break;
     } else {
       if (select.value === "default") {
@@ -322,13 +316,6 @@ function getRandomPassword() {
     }
   }
 }
-// alert(select.value);
-
-// Filterd!!!
-// const numbersOnlyArr = function filter_list_numbers_only(l) {
-//   return l.filter((characters) => typeof characters === "number");
-// };
-// console.log(filter_list(arr));
 
 // Copy Clipboard
 firstInput.addEventListener("dblclick", handleCopyText);
@@ -337,18 +324,6 @@ function handleCopyText() {
   const cb = navigator.clipboard;
   cb.writeText(firstInput.value).then(() => alert("Password Copied!"));
 }
-
-// firstInput.addEventListener("dblclick", () =>
-//   navigator.clipboard
-//     .writeText(firstInput.value)
-//     .then(() => alert("Text copied"))
-// );
-
-// for (var i = 0; i < characters.length; i++) {
-//   let randomNum = Math.floor(Math.random() * characters.length);
-
-//   firstInput.value += characters[randomNum];
-// }
 
 // Dark/Light Functionality:
 document.body.style = "background-color: var(--bs-dark);transition: 0.5s;";
@@ -380,12 +355,12 @@ function setLight() {
     "linear-gradient(318.32deg, #c3d1e4 0%, #dde7f3 55%, #d4e0ed 100%)"
   );
   h1.style.color = "#1f2937";
-  // passwordImage.style.visibility = "hidden";
   firstInput.style.backgroundColor = "#ffffff";
   secondInput.style.backgroundColor = "#ffffff";
 
   firstInput.style.color = "#273549";
   secondInput.style.color = "#273549";
+  numbersInput.style.backgroundColor = "#FFFFFF";
 
   container.classList.remove("shadow-dark");
   setTimeout(() => {
@@ -398,11 +373,12 @@ function setLight() {
 function setDark() {
   root.style.setProperty("--bs-dark", "#1f2937");
   h1.style.color = "white";
-  // passwordImage.style.visibility = "visible";
   firstInput.style.backgroundColor = "#273549";
   secondInput.style.backgroundColor = "#273549";
   firstInput.style.color = "#55F991";
   secondInput.style.color = "#55F991";
+  numbersInput.style.backgroundColor = "#1f2a37";
+
   container.classList.remove("shadow-light");
   setTimeout(() => {
     container.classList.add("shadow-dark");
@@ -412,8 +388,7 @@ function setDark() {
   themeIcon.src = moon;
 }
 
-// Site Info Disappear after while!
-
+// Site-Info Disappear after while!
 setTimeout(() => {
   siteInfoDiv.style.visibility = "hidden";
 }, 6000);
