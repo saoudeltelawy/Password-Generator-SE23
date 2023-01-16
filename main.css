@@ -18,7 +18,8 @@ body {
 .site-info {
   border-radius: 6px;
   box-shadow: -5px -2px 3px #00000070;
-  background-color: #434b57;
+  /* background-color: #434b57; */
+  background-color: #434b570a;
   padding: 0.6rem 1rem;
   width: 20%;
   position: absolute;
@@ -32,7 +33,14 @@ body {
   line-height: 1.4;
   text-indent: 1px;
   /* white-space: pre-line; */
+  color: #787d86b5;
 }
+
+.site-info li {
+  word-break: break-all;
+  margin-left: -1.9rem;
+}
+
 .site-info li::marker {
   color: rgba(249, 249, 249, 0.401);
 }
@@ -244,11 +252,11 @@ input {
 footer {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 20rem;
 }
 
 footer p {
-  color: #d5d4d8;
+  color: #d5d4d84f;
   font-size: 0.8rem;
   margin: 0;
 }

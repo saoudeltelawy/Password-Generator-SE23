@@ -243,17 +243,17 @@ const charactersNoSymbols = [
 ];
 
 // Page Elements:
-let h1 = document.querySelector("h1");
-let btn = document.querySelector(".btn");
-let icon = document.querySelector(".icon");
+const h1 = document.querySelector("h1");
+const btn = document.querySelector(".btn");
+const icon = document.querySelector(".icon");
 // let passwordImage = document.querySelector(".password-img");
-let firstInput = document.getElementById("first-input");
-let secondInput = document.getElementById("second-input");
+const firstInput = document.getElementById("first-input");
+const secondInput = document.getElementById("second-input");
 let footer = document.querySelector("footer p");
-let siteInfoDiv = document.querySelector("div.site-info");
+const siteInfoDiv = document.querySelector("div.site-info");
 let numbersInput = document.querySelector(".numbers-input");
 let numberInputValue = numbersInput.value;
-let select = document.getElementById("types");
+const select = document.getElementById("types");
 
 function animateIcon() {
   //   icon.classList.remove("fa-unlock");
