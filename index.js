@@ -263,12 +263,16 @@ function animateIcon() {
 setInterval(animateIcon, 2000);
 
 // Logic
+
+function getRandomNumber(arr) {
+  return Math.floor(Math.random() * arr.length);
+}
+
 numbersInput.addEventListener("change", function (e) {
   numberInputValue = e.target.value;
 });
 
 btn.addEventListener("click", function () {
-  let randomNum = Math.floor(Math.random() * characters.length);
   if (!firstInput.value && !secondInput.value) {
     getRandomPassword();
   } else if (firstInput.value && secondInput.value) {
@@ -280,9 +284,9 @@ btn.addEventListener("click", function () {
 
 function getRandomPassword() {
   for (var i = 0; i < numberInputValue; i++) {
-    let firstRandomNum = Math.floor(Math.random() * characters.length);
-    let secondRandomNum = Math.floor(Math.random() * characters.length);
-    let randomNum = Math.floor(Math.random() * characters.length);
+    let firstRandomNum = getRandomNumber(characters);
+
+    let secondRandomNum = getRandomNumber(characters);
 
     if (numberInputValue >= 16) {
       break;
@@ -291,23 +295,20 @@ function getRandomPassword() {
         firstInput.value += characters[firstRandomNum];
         secondInput.value += characters[secondRandomNum];
       } else if (select.value === "no-numbers") {
-        let firstRandomNumberForNoNumbersArray = Math.floor(
-          Math.random() * charactersNoNumbers.length
-        );
-        let secondRandomNumberForNoNumbersArray = Math.floor(
-          Math.random() * charactersNoNumbers.length
-        );
+        let firstRandomNumberForNoNumbersArray =
+          getRandomNumber(charactersNoNumbers);
+        let secondRandomNumberForNoNumbersArray =
+          getRandomNumber(charactersNoNumbers);
         firstInput.value +=
           charactersNoNumbers[firstRandomNumberForNoNumbersArray];
         secondInput.value +=
           charactersNoNumbers[secondRandomNumberForNoNumbersArray];
       } else if (select.value === "no-symbols") {
-        let firstRandomNumberForNoNumbersArray = Math.floor(
-          Math.random() * charactersNoSymbols.length
-        );
-        let secondRandomNumberForNoNumbersArray = Math.floor(
-          Math.random() * charactersNoSymbols.length
-        );
+        let firstRandomNumberForNoNumbersArray =
+          getRandomNumber(charactersNoSymbols);
+
+        let secondRandomNumberForNoNumbersArray =
+          getRandomNumber(charactersNoSymbols);
         firstInput.value +=
           charactersNoSymbols[firstRandomNumberForNoNumbersArray];
         secondInput.value +=
