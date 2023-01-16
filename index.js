@@ -246,7 +246,7 @@ const charactersNoSymbols = [
 let h1 = document.querySelector("h1");
 let btn = document.querySelector(".btn");
 let icon = document.querySelector(".icon");
-let passwordImage = document.querySelector(".password-img");
+// let passwordImage = document.querySelector(".password-img");
 let firstInput = document.getElementById("first-input");
 let secondInput = document.getElementById("second-input");
 let footer = document.querySelector("footer p");
@@ -380,7 +380,7 @@ function setLight() {
     "linear-gradient(318.32deg, #c3d1e4 0%, #dde7f3 55%, #d4e0ed 100%)"
   );
   h1.style.color = "#1f2937";
-  passwordImage.style.visibility = "hidden";
+  // passwordImage.style.visibility = "hidden";
   firstInput.style.backgroundColor = "#ffffff";
   secondInput.style.backgroundColor = "#ffffff";
 
@@ -398,7 +398,7 @@ function setLight() {
 function setDark() {
   root.style.setProperty("--bs-dark", "#1f2937");
   h1.style.color = "white";
-  passwordImage.style.visibility = "visible";
+  // passwordImage.style.visibility = "visible";
   firstInput.style.backgroundColor = "#273549";
   secondInput.style.backgroundColor = "#273549";
   firstInput.style.color = "#55F991";
